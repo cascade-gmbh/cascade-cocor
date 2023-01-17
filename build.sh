@@ -13,7 +13,7 @@ cmake --build . --config $CMAKE_BUILD_TYPE
 # copy build result
 echo EXECUTABLE:
 if test -f "cocor"; then
-  cp ./cocor ./cocor.$TARGET_SPEC.
+  cp ./cocor ./cocor.$TARGET_SPEC
 elif test -f "Debug/cocor.exe"; then
   cp ./Debug/cocor.exe ./cocor.$TARGET_SPEC.exe
 elif test -f "Release/cocor.exe"; then
