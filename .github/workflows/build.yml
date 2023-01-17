@@ -24,6 +24,7 @@ jobs:
         with:
           name: cocor-artifacts
           path: cocor.${{ matrix.os }}-${{ matrix.build_type }}*
+          if-no-files-found: error 
  
     strategy:
       fail-fast: false
