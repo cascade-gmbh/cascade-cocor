@@ -10,14 +10,16 @@ echo CMAKE
 cmake .  
 cmake --build . --config $CMAKE_BUILD_TYPE
 
-# copy msvc build result
-if test -f "Debug/cocor.exe"; then
-  echo --> copy windows DEBUG executable
-  cp ./Debug/cocor.exe ./cocor.exe
+# copy build result
+echo executable:
+if test -f "cocor"; then
+  cp ./cocor.exe ./$TARGET_SPEC-cocor.exe
+elif test -f "Debug/cocor.exe"; then
+  cp ./Debug/cocor.exe ./$TARGET_SPEC-cocor.exe
 elif test -f "Release/cocor.exe"; then
-  echo --> copy windows RELEASE executable
-  cp ./Release/cocor.exe ./cocor.exe
+  cp ./Release/cocor.exe ./$TARGET_SPEC-cocor.exe
 fi
+ls $TARGET_SPEC-*
 
 # simple test
 echo COCOR TEST-CALL WITHOUT PARAMETERS:

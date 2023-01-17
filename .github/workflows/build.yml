@@ -11,6 +11,7 @@ jobs:
 
     env:
       CMAKE_BUILD_TYPE: "${{ matrix.build_type }}"
+      TARGET_SPEC: ${{ matrix.os }}-${{ matrix.build_type }}
       
     defaults:
       run:
@@ -22,12 +23,12 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: cocor-artifacts
-          path: cocor*
+          path: $TARGET_SPEC-cocor*
  
     strategy:
       fail-fast: false
       matrix:
-        os: [Ubuntu-22.04, macOS-12, Windows-2022]
-        build_type: [Debug, Release]
+        os: [ubuntu-22.04, macos-12, windows-2022]
+        build_type: [debug, release]
 
 
