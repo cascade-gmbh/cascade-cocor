@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: cocor-artifacts
-          path: $TARGET_SPEC-cocor*
+          path: ${{ matrix.os }}-${{ matrix.build_type }}-cocor*
  
     strategy:
       fail-fast: false
