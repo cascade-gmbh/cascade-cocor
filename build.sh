@@ -6,26 +6,23 @@ cd $(dirname $0)
 echo ------------------------------------------------------- build-cocor
 
 # invoke cmake
-echo CMAKE
+echo CMAKE:
 cmake .  
 cmake --build . --config $CMAKE_BUILD_TYPE
 
 # copy build result
-echo copy executable to $CMAKE_OUTPUT_HOME
-mkdir -p $CMAKE_OUTPUT_HOME
+echo EXECUTABLE:
 if test -f "cocor"; then
-    cp ./cocor $CMAKE_OUTPUT_HOME/
+  cp ./cocor ./cocor.$TARGET_SPEC
 elif test -f "Debug/cocor.exe"; then
-    echo -- windows DEBUG build
-    cp ./Debug/cocor.exe $CMAKE_OUTPUT_HOME/cocor.exe
+  cp ./Debug/cocor.exe ./cocor.$TARGET_SPEC.exe
 elif test -f "Release/cocor.exe"; then
-    echo -- windows RELEASE build
-    cp ./Release/cocor.exe $CMAKE_OUTPUT_HOME/cocor.exe
+  cp ./Release/cocor.exe ./cocor.$TARGET_SPEC.exe
 fi
+ls cocor.$TARGET_SPEC*
 
 # simple test
 echo COCOR TEST-CALL WITHOUT PARAMETERS:
-cd $CMAKE_OUTPUT_HOME
-./cocor
+./cocor.$TARGET_SPEC
 
 
