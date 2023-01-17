@@ -1,8 +1,9 @@
 name: build
 
 on:
-  workflow_call:       # workflow is reusable
-  workflow_dispatch:   # workflow can be run manually from the actions tab
+  workflow_dispatch:       # workflow can be run manually from the actions tab
+  schedule:
+    - cron: '0 3 * * 0'    # run workflow at 3am each sunday
 
 jobs:    
 
