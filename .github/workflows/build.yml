@@ -32,20 +32,24 @@ jobs:
       fail-fast: false
 
       matrix:
-        os:
-          - Ubuntu-22.04
-          - macOS-12
-        arch:
-          - X64
-          - ARM64
-        compiler:
-          - LLVM
-          - GCC
-          - MSVC
-        generator:
-          - "Ninja Multi-Config"
-        build_type:
-          - Debug
-          - Release
+        os: [Ubuntu-22.04, macOS-12, Windows-2022]
+        arch: [X64, ARM64]
+        compiler: [LLVM, GCC, MSVC]
+        build_type: [Debug, Release]
+        generator: "Ninja Multi-Config"
+        exclude:        
+          - os: Ubuntu-22.04
+            compiler: MSVC
+          - os: macOS-12
+            compiler: MSVC
+          - os: Windows-2022
+            compiler: GCC
 
+        # include:           
+        # - os: Windows-2022
+        #   arch: X64
+        #   compiler: MSVC
+        #   generator: "Visual Studio 17 2022"
+        #   build_type: Release
+        
 
