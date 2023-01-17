@@ -11,7 +11,7 @@ jobs:
 
     env:
       CMAKE_BUILD_HOME: "${{ github.workspace }}/cmake_out"
-      CMAKE_OUTPUT_HOME: "${{ github.workspace }}/${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.compiler }}-${{ matrix.build_type }}"
+      CMAKE_OUTPUT_HOME: "${{ github.workspace }}/cocor-artifacts/${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.compiler }}-${{ matrix.build_type }}"
       CMAKE_BUILD_TYPE: "${{ matrix.build_type }}"
       CMAKE_DEVELOPER_MODE: "OFF"
       
@@ -22,6 +22,10 @@ jobs:
     steps:   
       - uses: actions/checkout@v3
       - run: ./build.sh 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cocor-artifacts
+          path: ${{ github.workspace }}/cocor-artifacts/ 
  
     strategy:
 
