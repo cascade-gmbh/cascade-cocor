@@ -65,15 +65,10 @@ Coco/R itself) does not fall under the GNU General Public License.
 #define wcscasecmp strcasecmp
 #define wcsncasecmp strncasecmp
 
-#if _MSC_VER >= 1400
-#define coco_swprintf snprintf_s
-#elif _MSC_VER >= 1300
-#define coco_swprintf _snprintf
-#elif defined __MINGW32__
-#define coco_swprintf _snprintf
-#else
-// assume every other compiler knows sprintf
 #define coco_swprintf snprintf
+#if _MSC_VER >= 1400
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
 #endif
 
 #define COCO_WCHAR_MAX 255
