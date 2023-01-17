@@ -11,7 +11,7 @@ jobs:
 
     env:
       CMAKE_BUILD_HOME: "${{ github.workspace }}/cmake_out"
-      CMAKE_OUTPUT_HOME: "${{ github.workspace }}/cocor-artifacts/${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.build_type }}"
+      CMAKE_OUTPUT_HOME: "${{ github.workspace }}/cocor-artifacts/${{ matrix.os }}-${{ matrix.build_type }}"
       CMAKE_BUILD_TYPE: "${{ matrix.build_type }}"
       CMAKE_DEVELOPER_MODE: "OFF"
       
@@ -31,7 +31,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [Ubuntu-22.04, macOS-12, Windows-2022]
-        arch: [X32, X64, ARM32, ARM64]
         build_type: [Debug, Release]
 
 
