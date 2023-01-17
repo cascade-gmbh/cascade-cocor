@@ -33,14 +33,14 @@ jobs:
 
       matrix:
         os:
-          - ubuntu-22.04
-          - macos-12
+          - Ubuntu-22.04
+          - MacOS-12
         arch:
           - X64
           - ARM64
         compiler:
-          - llvm
-          - gcc
+          - LLVM
+          - GCC
         generator:
           - "Ninja Multi-Config"
         build_type:
@@ -49,27 +49,27 @@ jobs:
 
         include:
         
-          - os: windows-2022
+          - os: Windows-2022
             arch: X64
-            compiler: msvc
+            compiler: MSVC
             generator: "Visual Studio 17 2022"
             build_type: Debug
         
-          - os: windows-2022
+          - os: Windows-2022
             arch: X64
-            compiler: msvc
+            compiler: MSVC
             generator: "Visual Studio 17 2022"
             build_type: Release
         
-          - os: windows-2022    
+          - os: Windows-2022    
             arch: ARM64
-            compiler: msvc
+            compiler: MSVC
             generator: "Visual Studio 17 2022"
             build_type: Debug
 
-          - os: windows-2022    
+          - os: Windows-2022    
             arch: ARM64
-            compiler: msvc
+            compiler: MSVC
             generator: "Visual Studio 17 2022"
             build_type: Release
 
