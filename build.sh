@@ -6,12 +6,12 @@ cd $(dirname $0)
 echo ------------------------------------------------------- build-cocor
 
 # invoke cmake
-echo CMAKE
+echo CMAKE:
 cmake .  
 cmake --build . --config $CMAKE_BUILD_TYPE
 
 # copy build result
-echo executable:
+echo EXECUTABLE:
 if test -f "cocor"; then
   cp ./cocor ./$TARGET_SPEC-cocor
 elif test -f "Debug/cocor.exe"; then
