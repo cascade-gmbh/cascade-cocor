@@ -1,1 +1,7 @@
-.DS_Store
+build-*
+*.txt.user
+CMakeFiles
+*.cmake
+CMakeCache.txt
+Makefile
+/cocor
