@@ -4,3 +4,13 @@
 [![](https://github.com/cascade-gmbh/cascade-public/actions/workflows/build.yml/badge.svg)](.github/workflows/build.yml)
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP)
+
+## Download latest executables
+
+- [cocor.macos-12-debug](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.macos-12-debug)
+- [cocor.macos-12-release](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.macos-12-release)
+- [cocor.ubuntu-22.04-debug](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.ubuntu-22.04-debug)
+- [cocor.ubuntu-22.04-release](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.ubuntu-22.04-release)
+- [cocor.windows-2022-debug.exe](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.windows-2022-debug.exe)
+- [cocor.windows-2022-release.exe](https://github.com/cascade-gmbh/cocor/releases/download/1.0.0/cocor.windows-2022-release.exe)
+
