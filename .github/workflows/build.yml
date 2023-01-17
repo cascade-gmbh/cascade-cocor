@@ -1,0 +1,71 @@
+name: build
+
+on:
+  workflow_call:       # workflow is reusable
+  workflow_dispatch:   # workflow can be run manually from the actions tab
+
+jobs:    
+
+  ci:  
+    runs-on: ${{ matrix.os }}    
+
+    env:
+      CMAKE_BUILD_HOME: "${{ github.workspace }}/cmake_out"
+      CMAKE_OUTPUT_HOME: "${{ github.workspace }}/${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.compiler }}-${{ matrix.build_type }}"
+      CMAKE_BUILD_TYPE: "${{ matrix.build_type }}"
+      CMAKE_DEVELOPER_MODE: "OFF"
+      
+    defaults:
+      run:
+        shell: bash
+        
+    steps:   
+      - uses: actions/checkout@v3
+      - run: ./build.sh 
+ 
+    strategy:
+
+      fail-fast: false
+
+      matrix:
+        os:
+          - ubuntu-22.04
+          - macos-12
+        arch:
+          - X64
+          - ARM64
+        compiler:
+          - llvm
+          - gcc
+        generator:
+          - "Ninja Multi-Config"
+        build_type:
+          - Debug
+          - Release
+
+        include:
+        
+          - os: windows-2022
+            arch: X64
+            compiler: msvc
+            generator: "Visual Studio 17 2022"
+            build_type: Debug
+        
+          - os: windows-2022
+            arch: X64
+            compiler: msvc
+            generator: "Visual Studio 17 2022"
+            build_type: Release
+        
+          - os: windows-2022    
+            arch: ARM64
+            compiler: msvc
+            generator: "Visual Studio 17 2022"
+            build_type: Debug
+
+          - os: windows-2022    
+            arch: ARM64
+            compiler: msvc
+            generator: "Visual Studio 17 2022"
+            build_type: Release
+
