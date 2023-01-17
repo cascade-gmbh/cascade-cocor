@@ -22,7 +22,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: cocor-artifacts
-          path: ${{ github.workspace }} cocor.*
+          path: cocor*
  
     strategy:
       fail-fast: false
