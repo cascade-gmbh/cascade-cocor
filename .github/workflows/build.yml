@@ -35,7 +35,7 @@ jobs:
         os:
           - Ubuntu-22.04
           - macOS-12
-        arch:s
+        arch:
           - X64
           - ARM64
         compiler:
