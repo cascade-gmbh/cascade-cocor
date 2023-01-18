@@ -21,6 +21,12 @@ jobs:
     steps:   
       - uses: actions/checkout@v3
       - run: ./build.sh 
+      - run: |      
+          if test -f "cocor.exe"; then
+            mv cocor.exe ./cocor.${{ matrix.os }}-${{ matrix.build_type }}.exe
+          else  
+            mv cocor ./cocor.${{ matrix.os }}-${{ matrix.build_type }}
+          fi          
       - uses: actions/upload-artifact@v3
         with:
           name: cocor-executables
@@ -41,9 +47,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: cocor-executables  
-      - run: |
-          mkdir testdir
-          echo "test" > testdir/test.txt 
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.0.0"
