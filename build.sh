@@ -6,7 +6,7 @@ cd $(dirname $0)
 echo ------------------------------------------------------- build-cocor
 
 cmake .  
-cmake --build . --config $CMAKE_BUILD_TYPE
+cmake --build . --config $CMAKE_BUILD_TYPE # 'Debug' or 'Release'
 
 if test -f "Debug/cocor.exe"; then
   cp ./Debug/cocor.exe ./cocor.exe
