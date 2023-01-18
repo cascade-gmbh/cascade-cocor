@@ -6,7 +6,7 @@
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
 Executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).
 
-## Download latest executables
+## Download generated executables
 
 - [cocor.macos-12-debug](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-debug)
 - [cocor.macos-12-release](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-release)
