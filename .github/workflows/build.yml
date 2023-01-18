@@ -48,7 +48,7 @@ jobs:
           tag: "v1.0.0"
           allowUpdates: true
           removeArtifacts: true
-          artifacts: "cocor.${{ matrix.os }}-${{ matrix.build_type }}*"
+          artifacts: "*"
          
     
    #   - uses: softprops/action-gh-release@v1
