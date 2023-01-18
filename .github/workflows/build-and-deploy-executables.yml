@@ -1,4 +1,4 @@
-name: build
+name: build-and-deploy-executables
 
 on:
   workflow_dispatch:       # workflow can be run manually from the actions tab
@@ -7,7 +7,7 @@ on:
 
 jobs:    
 
-  ci:  
+  build:  
     runs-on: ${{ matrix.os }}    
 
     env:
@@ -33,4 +33,19 @@ jobs:
         os: [ubuntu-22.04, macos-12, windows-2022]
         build_type: [debug, release]
 
+  deploy-executables-v1-0-0:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: cocor-artifacts   
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: "v1.0.0"
+          allowUpdates: true
+          removeArtifacts: true
+          artifacts: "*"
+         
 
