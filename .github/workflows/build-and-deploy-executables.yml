@@ -42,8 +42,8 @@ jobs:
         with:
           name: cocor-executables  
       - run: |
-          - mkdir testdir
-          - echo "test" > testdir/test.txt 
+          mkdir testdir
+          echo "test" > testdir/test.txt 
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.0.0"
