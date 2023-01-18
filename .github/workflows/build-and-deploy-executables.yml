@@ -54,6 +54,7 @@ jobs:
         with:
           tag: "v1.1.0"
           name: "1.1.0: Binary stream extensions"
+          body: "Rules to define binary input chunks"
           prerelease: true
           allowUpdates: true
           removeArtifacts: true
