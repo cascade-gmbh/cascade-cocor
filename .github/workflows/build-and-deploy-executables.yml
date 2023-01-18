@@ -53,6 +53,8 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.1.0"
+          name: "1.1.0: Binary Beast"
+          prerelease: true
           allowUpdates: true
           removeArtifacts: true
           artifacts: "*"
