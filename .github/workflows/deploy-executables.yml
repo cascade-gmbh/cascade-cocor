@@ -12,7 +12,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: cocor-artifacts
-          if-no-files-found: error 
     
       - uses: softprops/action-gh-release@v1
       # if: startsWith(github.ref, 'refs/tags/')
