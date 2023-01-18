@@ -3,10 +3,15 @@
 # set current directory to script source directory:
 cd $(dirname $0)
 
+# ensure environment:
+if [[ -z "${CMAKE_BUILD_TYPE}" ]]; then
+  CMAKE_BUILD_TYPE="Debug"
+fi
+
 echo ------------------------------------------------------- build-cocor
 
 cmake .  
-cmake --build . --config $CMAKE_BUILD_TYPE # 'Debug' or 'Release'
+cmake --build . --config $CMAKE_BUILD_TYPE
 
 if test -f "Debug/cocor.exe"; then
   cp ./Debug/cocor.exe ./cocor.exe
