@@ -33,22 +33,21 @@ jobs:
         os: [ubuntu-22.04, macos-12]      # , windows-2022]
         build_type: [debug, release]
 
-  deploy-executables:
+  deploy-executables-v1-0-0:
     runs-on: ubuntu-latest
-    # permissions: write-all
+    permissions: write-all
     needs: build
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: cocor-artifacts
-    
+          name: cocor-artifacts    
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.0.0"
           allowUpdates: true
-          replacesArtifacts: true
-          artifacts: "cocor.macos-12-debug,cocor.macos-12-release,cocor.ubuntu-22.04-debug"
-          # token: ${{ secrets.GITHUB_TOKEN }}
+          removeArtifacts: true
+          artifacts: "cocor.${{ matrix.os }}-${{ matrix.build_type }}*"
+         
     
    #   - uses: softprops/action-gh-release@v1
    #   # if: startsWith(github.ref, 'refs/tags/')
