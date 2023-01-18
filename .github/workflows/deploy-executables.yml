@@ -6,7 +6,7 @@ on:
 
 jobs:    
 
-  deploy:
+  deploy-executables:
     runs-on: ubuntu-latest
     steps:
       - run: echo "no automatic deployment yet"
