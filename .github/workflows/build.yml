@@ -35,7 +35,7 @@ jobs:
 
   deploy-executables:
     runs-on: ubuntu-latest
-    permissions: write-all
+    # permissions: write-all
     needs: build
     steps:
       - uses: actions/download-artifact@v3
@@ -47,7 +47,7 @@ jobs:
           tag: "v1.0.0"
           allowUpdates: true
           replacesArtifacts: true
-          artifacts: "cocor.macos-12-debug,cocor.macos-12-release"
+          artifacts: "cocor.macos-12-debug,cocor.macos-12-release,cocor.ubuntu-22.04-debug"
           # token: ${{ secrets.GITHUB_TOKEN }}
     
    #   - uses: softprops/action-gh-release@v1
