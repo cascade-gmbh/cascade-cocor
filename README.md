@@ -4,7 +4,8 @@
 [![](https://github.com/cascade-gmbh/cocor/actions/workflows/build-and-deploy-executables.yml/badge.svg)](.github/workflows/build-and-deploy-executables.yml)
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
-Executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).
+Executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).  
+Compiler: clang on macOS, gcc on Ubuntu, msvc on Windows.
 
 ## Deployed executables
 

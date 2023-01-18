@@ -12,18 +12,27 @@ jobs:
 
     env:
       CMAKE_BUILD_TYPE: "${{ matrix.build_type }}"
-      TARGET_SPEC: ${{ matrix.os }}-${{ matrix.build_type }}
       
     defaults:
       run:
         shell: bash
         
     steps:   
+    
       - uses: actions/checkout@v3
+      
       - run: ./build.sh 
+      
+      - run: |      
+          if test -f "cocor.exe"; then
+            mv cocor.exe ./cocor.${{ matrix.os }}-${{ matrix.build_type }}.exe
+          else  
+            mv cocor ./cocor.${{ matrix.os }}-${{ matrix.build_type }}
+          fi          
+          
       - uses: actions/upload-artifact@v3
         with:
-          name: cocor-artifacts
+          name: cocor-executables
           path: cocor.${{ matrix.os }}-${{ matrix.build_type }}*
           if-no-files-found: error 
  
@@ -40,7 +49,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: cocor-artifacts   
+          name: cocor-executables  
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.0.0"
