@@ -30,11 +30,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-12, windows-2022]
+        os: [ubuntu-22.04, macos-12]      # , windows-2022]
         build_type: [debug, release]
 
   deploy-executables:
     runs-on: ubuntu-latest
+    permissions: write-all
     needs: build
     steps:
       - uses: actions/download-artifact@v3
@@ -45,9 +46,9 @@ jobs:
         with:
           tag: "v1.0.0"
           allowUpdates: true
-          replaceArtifacts: true
+          replacesArtifacts: true
           artifacts: "cocor.macos-12-debug,cocor.macos-12-release"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.GITHUB_TOKEN }}
     
    #   - uses: softprops/action-gh-release@v1
    #   # if: startsWith(github.ref, 'refs/tags/')
