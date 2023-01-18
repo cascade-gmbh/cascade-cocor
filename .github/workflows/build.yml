@@ -30,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-12]      # , windows-2022]
+        os: [ubuntu-22.04]      # , macos-12, windows-2022]
         build_type: [debug, release]
 
   deploy-executables-v1-0-0:
@@ -41,6 +41,8 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: cocor-artifacts    
+          
+      - run: ls -l    
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.0.0"
