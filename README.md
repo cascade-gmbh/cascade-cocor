@@ -4,8 +4,9 @@
 # Cascade Coco/R
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
-Generated executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).  
-Currently working on binary stream extensions.
+Generated executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).
+
+Next upcoming release: 1.1.0: binary stream extensions.
 
 ## Deployed executables
 
