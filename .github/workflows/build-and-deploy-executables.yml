@@ -39,7 +39,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-12, windows-2022]
+        os: [ubuntu-22.04]    # , macos-12, windows-2022]
         build_type: [debug, release]
 
   deploy-executables-v1-1-0-alpha:
