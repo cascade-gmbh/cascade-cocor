@@ -5,16 +5,15 @@
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
 Executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).  
-Compiler: clang on macOS, gcc on Ubuntu, msvc on Windows.
 
 ## Deployed executables
 
 ### Release v1.0.0
 
-- [cocor.macos-12-debug](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-debug)
-- [cocor.macos-12-release](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-release)
-- [cocor.ubuntu-22.04-debug](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.ubuntu-22.04-debug)
-- [cocor.ubuntu-22.04-release](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.ubuntu-22.04-release)
-- [cocor.windows-2022-debug.exe](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.windows-2022-debug.exe)
-- [cocor.windows-2022-release.exe](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.windows-2022-release.exe)
+- [cocor.macos-12-debug](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-debug) (clang)
+- [cocor.macos-12-release](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.macos-12-release) (clang)
+- [cocor.ubuntu-22.04-debug](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.ubuntu-22.04-debug) (gcc)
+- [cocor.ubuntu-22.04-release](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.ubuntu-22.04-release) (gcc)
+- [cocor.windows-2022-debug.exe](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.windows-2022-debug.exe) (msvc)
+- [cocor.windows-2022-release.exe](https://github.com/cascade-gmbh/cocor/releases/download/v1.0.0/cocor.windows-2022-release.exe) (msvc)
 
