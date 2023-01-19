@@ -50,6 +50,9 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: cocor-executables  
+      - uses: richardsimko/update-tag@v1
+        with:
+          tag_name: "v1.1.0-alpha"
       - uses: ncipollo/release-action@v1
         with:
           tag: "v1.1.0-alpha"
