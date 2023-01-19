@@ -50,14 +50,17 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: cocor-executables  
-      - uses: richardsimko/update-tag@v1
+      - uses: rickstaa/action-create-tag@v1
         with:
-          tag_name: "v1.1.0-alpha"
+          tag: "latest"
+          message: "Latest release"
       - uses: ncipollo/release-action@v1
         with:
-          tag: "v1.1.0-alpha"
-          name: "1.1.0: Binary stream extensions"
-          body: "Rules for reading binary input chunks"
+          tag: "latest"
+          name: "latest"
+          body: |
+            # Working on 1.1.0: binary stream extensions
+            Rules for reading binary input chunks
           prerelease: true
           allowUpdates: true
           removeArtifacts: true
