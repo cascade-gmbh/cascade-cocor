@@ -5,6 +5,7 @@
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
 Generated executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).  
+Currently working on binary stream extensions.
 
 ## Deployed executables
 
