@@ -1,7 +1,7 @@
-# Cascade Coco/R
-
 [![license: GPL V2](https://img.shields.io/badge/License-GPL_v2-brightgreen.svg)](GPL_V2)
 [![](https://github.com/cascade-gmbh/cocor/actions/workflows/build-and-deploy-executables.yml/badge.svg)](https://github.com/cascade-gmbh/cocor/actions)
+
+# Cascade Coco/R
 
 Fork from [CocoR-CPP](https://github.com/mingodad/CocoR-CPP).  
 Generated executables used by [Cascade Public Monorepo](https://github.com/cascade-gmbh/cascade-public-monorepo).  
