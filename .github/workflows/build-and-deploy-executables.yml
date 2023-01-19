@@ -54,7 +54,7 @@ jobs:
           message: "temporary: work in progress"
           force_push_tag: true
 
-  deploy-executables-latest:
+  deploy-executables-wip:
     runs-on: ubuntu-latest
     permissions: write-all
     needs: tag-wip
