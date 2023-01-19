@@ -51,7 +51,7 @@ jobs:
       - uses: rickstaa/action-create-tag@v1
         with:
           tag: "latest"
-          message: "Latest release"
+          force_push_tag: true
 
   deploy-executables-latest:
     runs-on: ubuntu-latest
