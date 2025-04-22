@@ -30,7 +30,7 @@ jobs:
             mv cocor ./cocor.${{ matrix.os }}-${{ matrix.build_type }}
           fi          
           
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cocor-executables
           path: cocor.${{ matrix.os }}-${{ matrix.build_type }}*
@@ -59,7 +59,7 @@ jobs:
     permissions: write-all
     needs: tag-wip
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: cocor-executables  
       - uses: ncipollo/release-action@v1
